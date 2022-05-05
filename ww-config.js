@@ -80,6 +80,14 @@ export default {
             responsive: true,
             defaultValue: 'x',
         },
+        tickSize: {
+            label: 'Tick size',
+            type: 'Length',
+            options: {
+                unitChoices: [{ value: 'px', label: 'px', min: 0, max: 50 }],
+            },
+            defaultValue: '12px',
+        },
         ticksDisplay: {
             type: 'OnOff',
             label: 'Ticks display',

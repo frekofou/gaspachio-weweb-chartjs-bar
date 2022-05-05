@@ -254,7 +254,7 @@ export default {
                             grid: { color: this.content.gridColor, borderColor: this.content.gridColor },
                             ticks: {
                                 color: this.content.ticksColor,
-                                font: { size: parseInt(this.content.legendSize) },
+                                font: { size: parseInt(this.content.tickSize) },
                                 display: this.content.ticksDisplay,
                                 align: this.content.ticksAlign,
                                 
@@ -265,7 +265,7 @@ export default {
                             grid: { color: this.content.gridColor, borderColor: this.content.gridColor },
                             ticks: {
                                 color: this.content.ticksColor,
-                                font: { size: parseInt(this.content.legendSize) },
+                                font: { size: parseInt(this.content.tickSize) },
                                  display: this.content.ticksDisplay,
                                  align:this.content.ticksAlign,
                                  
@@ -307,8 +307,11 @@ export default {
         },
         'content.legendSize'() {
             this.chartInstance.options.plugins.legend.labels.font.size = parseInt(this.content.legendSize);
-            this.chartInstance.options.scales.x.ticks.font.size = parseInt(this.content.legendSize);
-            this.chartInstance.options.scales.y.ticks.font.size = parseInt(this.content.legendSize);
+            this.chartInstance.update();
+        },
+        'content.tickSize'() {
+            this.chartInstance.options.scales.x.ticks.font.size = parseInt(this.content.tickSize);
+            this.chartInstance.options.scales.y.ticks.font.size = parseInt(this.content.tickSize);
             this.chartInstance.update();
         },
         'content.gridColor'() {
