@@ -14,6 +14,10 @@ We add features based on chartjs options:
 
 - Tick align: you can choose the chart ticks's align
 
+Upgraded component
+
+- Chart.js to 3.7.0
+
 
 
 ## Installation
