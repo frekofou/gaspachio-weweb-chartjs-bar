@@ -14,6 +14,8 @@ We add features based on chartjs options:
 
 - Tick align: you can choose the chart ticks's align
 
+- Tick size: independant tick size configuration 
+
 Upgraded component
 
 - Chart.js to 3.7.0
