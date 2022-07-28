@@ -16,9 +16,14 @@ We add features based on chartjs options:
 
 - Tick size: independant tick size configuration 
 
+- Datalabel: you can choose to display DataLabels
+
+- Datalel: you can choose the Datalabels colors
+
 Upgraded component
 
 - Chart.js to 3.7.0
+- chartjs-plugin-datalabels 2.0.0 
 
 
 
