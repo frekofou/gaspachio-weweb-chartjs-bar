@@ -95,6 +95,18 @@ export default {
             responsive: true,
             defaultValue: true,
         },
+        dataLabelsDisplay: {
+            type: 'OnOff',
+            label: 'Datalabels display',
+            bindable: false,
+            responsive: false,
+            defaultValue: false,
+        },
+        dataLabelsColor: {
+            label: 'DataLabels color',
+            type: 'Color',
+            options: { nullable: true },
+        },
         ticksAlign: {
             type: 'TextSelect',
             label: 'Ticks align',

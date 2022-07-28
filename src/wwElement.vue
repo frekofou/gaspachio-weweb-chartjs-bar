@@ -5,6 +5,9 @@
 </template>
 
 <script>
+
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
 import {
     Chart,
     BarElement,
@@ -37,7 +40,9 @@ Chart.register(
     Legend,
     Title,
     Tooltip,
-    SubTitle
+    SubTitle,
+    ChartDataLabels
+    
 );
 
 export default {
@@ -245,6 +250,10 @@ export default {
                                 font: { size: parseInt(this.content.legendSize) },
                             },
                         },
+                        datalabels: {
+                            display: this.content.dataLabelsDisplay,
+                            color: this.content.dataLabelsColor,
+                        },
                     },
                     interaction: {
                         intersect: false,
@@ -334,11 +343,19 @@ export default {
             if (this.chartInstance) this.chartInstance.destroy();
             this.initChart();
         },
+        'content.dataLabelsDisplay'() {
+            if (this.chartInstance) this.chartInstance.destroy();
+            this.initChart();
+        },
         'content.ticksAlign'() {
             if (this.chartInstance) this.chartInstance.destroy();
             this.initChart();
         },
          'content.ticksColor'() {
+            if (this.chartInstance) this.chartInstance.destroy();
+            this.initChart();
+        },
+          'content.dataLabelsColor'() {
             if (this.chartInstance) this.chartInstance.destroy();
             this.initChart();
         },
